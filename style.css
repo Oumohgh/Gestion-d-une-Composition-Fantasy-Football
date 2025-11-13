@@ -28,7 +28,7 @@ body{
   z-index:50;
 }
 
-/*  grid: sidebar + main */
+/*  grid: side + main */
 .layout-grid{
   display:grid;
   grid-template-columns: 360px 1fr;
@@ -67,7 +67,7 @@ body{
   background:linear-gradient(180deg, #fff, #fbfdff);
 }
 
-/* thu */
+/*
 .player-card img{
   width:64px;
   height:64px;
@@ -76,7 +76,7 @@ body{
   flex-shrink:0;
   border:1px solid rgba(0,0,0,0.06);
 }
-
+*/
 /* dakhel dial joeur card*/
 .player-card .card-body{
   flex:1;
