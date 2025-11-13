@@ -1,0 +1,156 @@
+:root{
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --muted: #6c757d;
+  --accent: #0d6efd;
+  --surface-shadow: 0 6px 18px rgba(22,27,34,0.06);
+  --radius: 12px;
+}
+
+*{
+    box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background:var(--bg);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+
+.site-header{
+  background:linear-gradient(90deg, #ffffff, #fbfdff);
+  border-bottom:1px solid rgba(0,0,0,0.04);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+
+/*  grid: sidebar + main */
+.layout-grid{
+  display:grid;
+  grid-template-columns: 360px 1fr;
+  gap:18px;
+  padding:18px;
+  max-width:1200px;
+  margin:18px auto;
+}
+
+/* Side */
+.sidebar{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--surface-shadow);
+  min-height:60vh;
+  overflow:auto;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Joueur list: vertical */
+.players-list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* Player card */
+.player-card{
+  display:flex;
+  gap:12px;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,0.05);
+  align-items:center;
+  background:linear-gradient(180deg, #fff, #fbfdff);
+}
+
+/* thu */
+.player-card img{
+  width:64px;
+  height:64px;
+  object-fit:cover;
+  border-radius:8px;
+  flex-shrink:0;
+  border:1px solid rgba(0,0,0,0.06);
+}
+
+/* dakhel dial joeur card*/
+.player-card .card-body{
+  flex:1;
+  min-width:0;
+}
+.player-card .card-title{
+    font-size:0.95rem; 
+    margin:0 0 4px 0
+}
+.player-card .card-text{
+    font-size:0.78rem; 
+    color:var(--muted); 
+    margin:0}
+
+/* actions */
+.player-card .price{
+  font-weight:700;
+  margin-right:8px;
+}
+.player-card .controls{
+    display:flex; 
+    gap:6px; 
+    align-items:center
+}
+
+/* terrain  */
+.main-content .pitch{
+  border-radius:var(--radius);
+  box-shadow:var(--surface-shadow);
+  background:linear-gradient(180deg,#e9f7ee,#f7fff9);
+}
+
+/* terrain gird */
+.pitch-row{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:12px;
+}
+
+/* Gardien row center */
+.pitch-row.goalkeeper{
+  grid-template-columns: 1fr;
+  justify-items:center;
+}
+
+/* grid  ldefense/mid/attack */
+.pitch-row.defense{
+     grid-template-columns: repeat(4, 1fr);
+     }
+.pitch-row.midfield{ 
+    grid-template-columns: repeat(3, 1fr); 
+    justify-items:center; 
+}
+.pitch-row.attack{
+     grid-template-columns: repeat(3, 1fr); 
+     justify-items:center; }
+
+/* slot appearance */
+.slot{
+  background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+  border: 1px dashed rgba(0,0,0,0.08);
+  border-radius:10px;
+  min-height:84px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px;
+  text-align:center;
+}
+
+
+.slot .player-in-slot img{ width:56px; height:56px; border-radius:8px; object-fit:cover }
+
+/* Footer actions */
+footer .budget-display{font-size:1.05rem}
+.actions button{min-width:200px}
+

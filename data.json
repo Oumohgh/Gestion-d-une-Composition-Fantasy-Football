@@ -2,14 +2,14 @@
   {
     "id": "p1",
     "photo": "ter",
-    "nom": "",
+    "nom": "/images/r.webp",
     "poste": "Gardien",
     "nationalite": "Espagne",
     "prix": 6
   },
   {
     "id": "p2",
-    "photo": "",
+    "photo": "/images/r.webp",
     "nom": "konate",
     "poste": "Defenseur",
     "nationalite": "France",

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Fantasy Football GenV</title>
 
-  <!-- Bootstrap (optional, you included it before) -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Your stylesheet -->
+ 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,18 +16,19 @@
     <h1 class="m-0">Fantasy Football GenV</h1>
     <div class="header-controls d-flex gap-2">
       <button id="btnAddPlayer" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#playerModal">+ Ajouter un joueur</button>
-      <button id="toggleTheme" class="btn btn-outline-secondary">🌙</button>
+      
     </div>
   </header>
 
   <div class="layout-grid">
-    <!-- Sidebar: liste de joueurs -->
+    <!-- Sidebar liste dial joueur -->
     <aside class="sidebar p-3">
       <div class="sidebar-top mb-3 d-flex gap-2">
         <select id="filterPoste" class="form-select form-select-sm">
-          <option value="all">Filtrer par poste (Tous)</option>
+            <!--filtrage b poste (1gardien+4 defence+3 center+3 attack ==function:filtragePost-->
+        
           <option value="Gardien">Gardien</option>
-          <option value="Défenseur">Défenseur</option>
+          <option value="Defenseur">Defenseur</option>
           <option value="Milieu">Milieu</option>
           <option value="Attaquant">Attaquant</option>
         </select>
@@ -35,52 +36,36 @@
       </div>
 
       <div id="playersList" class="players-list">
-        <!-- Player cards injected here by JS -->
-        <!-- Example card markup:
-        <div class="player-card card">
-          <img src="..." class="card-img-top" />
-          <div class="card-body">
-            <h5 class="card-title">Nom</h5>
-            <p class="card-text small">Poste • Pays</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="price">10 M$</span>
-              <div>
-                <button class="btn btn-sm btn-success">➕ Ajouter</button>
-                <button class="btn btn-sm btn-outline-secondary">✏</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        -->
-      </div>
+    <!--n ajouter list dial jou b function ajouterJ-->  
+    </div>
     </aside>
 
-    <!-- Main: composition (le terrain) -->
+    <!-- terain khder -->
     <main class="main-content p-3">
       <section class="pitch card p-3">
-        <!-- Goalkeeper -->
+        <!-- Gardien  -->
         <div class="pitch-row goalkeeper mb-3">
           <div class="slot slot-gardien" data-pos="Gardien" id="slot-gardien">
-            <button class="btn btn-outline-primary w-100">Ajouter Gardien</button>
+            <button class="btn btn-outline-primary w-100">Ajouter gardien</button>
           </div>
         </div>
 
-        <!-- Defense (4) -->
+        <!-- les defences 4 -->
         <div class="pitch-row defense mb-3">
-          <div class="slot" data-pos="Défenseur" id="slot-def-1"><button class="btn btn-outline-primary w-100">Ajouter Défenseur</button></div>
-          <div class="slot" data-pos="Défenseur" id="slot-def-2"><button class="btn btn-outline-primary w-100">Ajouter Défenseur</button></div>
-          <div class="slot" data-pos="Défenseur" id="slot-def-3"><button class="btn btn-outline-primary w-100">Ajouter Défenseur</button></div>
-          <div class="slot" data-pos="Défenseur" id="slot-def-4"><button class="btn btn-outline-primary w-100">Ajouter Défenseur</button></div>
+          <div class="slot" data-pos="Defenseur" id="slot-def-1"><button class="btn btn-outline-primary w-100">Ajouter defenseur</button></div>
+          <div class="slot" data-pos="Defenseur" id="slot-def-2"><button class="btn btn-outline-primary w-100">Ajouter defenseur</button></div>
+          <div class="slot" data-pos="Defenseur" id="slot-def-3"><button class="btn btn-outline-primary w-100">Ajouter defenseur</button></div>
+          <div class="slot" data-pos="Defenseur" id="slot-def-4"><button class="btn btn-outline-primary w-100">Ajouter defenseur</button></div>
         </div>
 
-        <!-- Midfield (3) -->
+        <!-- les milieus 3 -->
         <div class="pitch-row midfield mb-3">
-          <div class="slot" data-pos="Milieu" id="slot-mid-1"><button class="btn btn-outline-primary w-100">Ajouter Milieu</button></div>
-          <div class="slot" data-pos="Milieu" id="slot-mid-2"><button class="btn btn-outline-primary w-100">Ajouter Milieu</button></div>
-          <div class="slot" data-pos="Milieu" id="slot-mid-3"><button class="btn btn-outline-primary w-100">Ajouter Milieu</button></div>
+          <div class="slot" data-pos="Milieu" id="slot-mid-1"><button class="btn btn-outline-primary w-100">Ajouter milieu</button></div>
+          <div class="slot" data-pos="Milieu" id="slot-mid-2"><button class="btn btn-outline-primary w-100">Ajouter milieu</button></div>
+          <div class="slot" data-pos="Milieu" id="slot-mid-3"><button class="btn btn-outline-primary w-100">Ajouter milieu</button></div>
         </div>
 
-        <!-- Attack (3) -->
+        <!-- les attacks 3 -->
         <div class="pitch-row attack mb-3">
           <div class="slot" data-pos="Attaquant" id="slot-att-1"><button class="btn btn-outline-primary w-100">Ajouter Attaquant</button></div>
           <div class="slot" data-pos="Attaquant" id="slot-att-2"><button class="btn btn-outline-primary w-100">Ajouter Attaquant</button></div>
@@ -90,10 +75,10 @@
 
       <footer class="mt-3 d-flex align-items-center justify-content-between">
         <div class="budget-display">
-          <strong>Budget restant :</strong> <span id="budgetValue">100</span> M$
+          <strong>Budget restant :</strong> <span id="bugetValue">100</span> $
         </div>
         <div class="actions">
-          <button id="resetComposition" class="btn btn-danger">🗑 Réinitialiser la composition</button>
+          <button id="resetComposition" class="btn btn-danger">Reinitialiser la composition</button>
         </div>
       </footer>
     </main>
@@ -104,7 +89,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <form id="playerForm" class="modal-content needs-validation" novalidate>
         <div class="modal-header">
-          <h5 class="modal-title">Ajouter un joueur</h5>
+          <h5 class="modal-title">Ajouter un joueur</h5> <!--finction Ajouterj-->
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
@@ -112,48 +97,48 @@
           <div class="mb-2">
             <label class="form-label">Nom complet</label>
             <input id="fullName" class="form-control"  />
-            <div class="invalid-feedback">Nom invalide (lettres seulement).</div>
+           <!--<div class="invalid-feedback">Nom invalide lettre seulement</div>--> 
           </div>
 
           <div class="mb-2">
             <label class="form-label">Poste</label>
             <select id="poste" class="form-select" required>
               <option value="">Choisir</option>
-              <option value="Gardien">Gardien</option>
-              <option value="Défenseur">Defenseur</option>
-              <option value="Milieu">Milieu</option>
-              <option value="Attaquant">Attaquant</option>
+              <option value="gardien">Gardien</option>
+              <option value="defenseur">Defenseur</option>
+              <option value="milieu">Milieu</option>
+              <option value="attaquant">Attaquant</option>
             </select>
-            <div class="invalid-feedback">Poste requis.</div>
+          
           </div>
 
           <div class="mb-2">
-            <label class="form-label">Nationalité</label>
-            <input id="nationalite" class="form-control" required pattern="^[A-Za-zÀ-ÿ '-]{2,}$" />
-            <div class="invalid-feedback">Nationalité invalide.</div>
+            <label class="form-label">Nationalite</label>
+            
+
           </div>
 
           <div class="mb-2">
-            <label class="form-label">Prix (M$)</label>
+            <label class="form-label">Prix$</label>
             <input id="prix" type="number" min="1" max="20" class="form-control" required />
-            <div class="invalid-feedback">Prix entre 1 et 20.</div>
+            <div class="invalid-feedback">Prix entre1et20</div>
           </div>
 
           <div class="mb-2">
-            <label class="form-label">Photo (URL)</label>
-            <input id="photo" type="url" class="form-control" required />
-            <div class="invalid-feedback">URL valide requise.</div>
+            <label class="form-label">Photo </label>
+            <input id="photo" type="url" class="form-control"  />
+           
           </div>
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">annuller</button>
           <button type="submit" class="btn btn-primary">Enregistrer</button>
         </div>
       </form>
     </div>
 
-  <script src="s"></script>
+ 
   
   <script src="script.js"></script>
 </body>
