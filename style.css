@@ -8,8 +8,12 @@
 }
 
 *{
-    box-sizing:border-box}
-html,body{height:100%}
+    box-sizing:border-box
+  }
+html,body
+{
+  height:100%
+}
 body{
   margin:0;
   font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -67,7 +71,7 @@ body{
   background:linear-gradient(180deg, #fff, #fbfdff);
 }
 
-/*
+
 .player-card img{
   width:64px;
   height:64px;
@@ -91,7 +95,7 @@ body{
     color:var(--muted); 
     margin:0}
 
-/* actions */
+/* a */
 .player-card .price{
   font-weight:700;
   margin-right:8px;
@@ -102,7 +106,7 @@ body{
     align-items:center
 }
 
-/* terrain  */
+/* terain  */
 .main-content .pitch{
   border-radius:var(--radius);
   box-shadow:var(--surface-shadow);
@@ -148,9 +152,18 @@ body{
 }
 
 
-.slot .player-in-slot img{ width:56px; height:56px; border-radius:8px; object-fit:cover }
+.slot .player-in-slot img{
+   width:56px; 
+   height:56px; 
+   border-radius:8px; 
+   object-fit:cover
+   }
 
-/* Footer actions */
-footer .budget-display{font-size:1.05rem}
-.actions button{min-width:200px}
+/* Footer  */
+footer .budget-display{
+  font-size:1.05rem
+}
+.actions button{
+  min-width:200px
+}
 

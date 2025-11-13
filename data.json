@@ -1,9 +1,10 @@
-
+{
+  "player":
 [
   {
     "id": "p1",
-    "photo": "ter",
-    "nom": "/images/r.webp",
+    "photo": "/images/r.webp",
+    "nom": "nuer",
     "poste": "Gardien",
     "nationalite": "Espagne",
     "prix": 6
@@ -16,3 +17,4 @@
     "nationalite": "France",
     "prix": 8
   }]
+}

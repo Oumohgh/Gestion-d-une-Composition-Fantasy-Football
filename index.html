@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Fantasy Football GenV</title>
 
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
- 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -26,17 +24,26 @@
       <div class="sidebar-top mb-3 d-flex gap-2">
         <select id="filterPoste" class="form-select form-select-sm">
             <!--filtrage b poste (1gardien+4 defence+3 center+3 attack ==function:filtragePost-->
-        
+          <option value="Kamlen">Tout les joueurs</option>
           <option value="Gardien">Gardien</option>
           <option value="Defenseur">Defenseur</option>
           <option value="Milieu">Milieu</option>
-          <option value="Attaquant">Attaquant</option>
+          <option >Attaquant</option>
         </select>
         <input id="searchPlayer" type="search" class="form-control form-control-sm" placeholder="Rechercher par nom">
       </div>
 
       <div id="playersList" class="players-list">
-        <p></p>
+        <!--function diaal listeJouers-->
+     <img src="/images/r.webp" alt="smia">
+            <div class="card-body">
+                <h5 class="card-title">smia</h5>
+                <p class="card-text">difa3   marocain</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="price">10$</span>
+                    
+                </div>
+            </div>
     <!--n ajouter list dial jou b function ajouterJ-->  
     </div>
     </aside>
@@ -85,7 +92,7 @@
     </main>
   </div>
 
-  <!--modal bach n ajouter j-->
+  <!--modal feh ajouetr-->
   <div class="modal fade" id="playerModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <form id="playerForm" class="modal-content needs-validation" novalidate>
@@ -120,7 +127,7 @@
           </div>
 
           <div class="mb-2">
-            <label class="form-label">Prix$</label>
+            <label class="form-label">PrixM$</label>
             <input id="prix" type="number" min="1" max="20" class="form-control" required />
             <div class="invalid-feedback">Prix entre1et20</div>
           </div>
@@ -128,18 +135,17 @@
           <div class="mb-2">
             <label class="form-label">Photo </label>
             <input id="photo" type="url" class="form-control"  />
-           
           </div>
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">annuller</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sortir sans Ajouter</button>
           <button type="submit" class="btn btn-primary">Enregistrer</button>
         </div>
       </form>
     </div>
 
- 
+
   
   <script src="script.js"></script>
 </body>
