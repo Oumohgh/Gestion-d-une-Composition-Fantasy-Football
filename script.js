@@ -66,7 +66,7 @@ function ajouterDCompition (playerId,slotElement) {
   </div>
   `;
      joueurs = joueurs.filter(j => j.id !==playerId)
- // localStorage.setItem("joueurs",
+  localStorage.setItem("joueurs",JSON.stringify(joueurs));
 
 
 
